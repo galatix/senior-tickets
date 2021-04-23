@@ -19,7 +19,7 @@
     <h1>CLASS OF 2021 SUNSET GALA</h1>
     <p>Note: All fields are required!</p>
     <br/>
-    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" onsubmit="return CheckForm(this);" method="post">
       <input type="hidden" name="cmd" value="_s-xclick">
       <input type="hidden" name="hosted_button_id" value="KB5R9JEWJGZTU">
       <table>
@@ -31,6 +31,20 @@
       <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
   </center>
+  
+  <script>
+    function CheckForm(obj1) { 
+     if (obj1.on0.value == ""){
+      alert ("You must fill in a value for Option 1!");
+      return false;
+     }
+     else if (obj1.on1.value == ""){
+      alert ("You must fill in a value for Option 2!");
+      return false;
+     }
+     return true;
+    }
+  </script>
 
   
   <style>
